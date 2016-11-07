@@ -26,9 +26,22 @@ public class EstudoView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        desenhaLinha(canvas);
+     //   desenhaLinha(canvas);
+     //   desenhaRetangulo(canvas);
 
-        desenhaRetangulo(canvas);
+        Paint paintCircle = new Paint();
+        paintCircle.setStyle(Paint.Style.STROKE);
+
+
+        canvas.drawCircle(100, 100, 100, paintCircle);
+
+        Paint paint = new Paint();
+        paint.setColor(Color.YELLOW);
+
+        canvas.drawLine(0, 100, 100, 100, paint);
+        canvas.drawLine(100, 0, 100, 100, paint);
+
+
     }
 
     private void desenhaRetangulo(Canvas canvas) {
