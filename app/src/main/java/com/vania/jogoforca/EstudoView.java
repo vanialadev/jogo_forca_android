@@ -29,6 +29,12 @@ public class EstudoView extends View {
      //   desenhaLinha(canvas);
      //   desenhaRetangulo(canvas);
 
+        desenhaCirculo(canvas);
+
+
+    }
+
+    private void desenhaCirculo(Canvas canvas) {
         Paint paintCircle = new Paint();
         paintCircle.setStyle(Paint.Style.STROKE);
 
@@ -40,8 +46,6 @@ public class EstudoView extends View {
 
         canvas.drawLine(0, 100, 100, 100, paint);
         canvas.drawLine(100, 0, 100, 100, paint);
-
-
     }
 
     private void desenhaRetangulo(Canvas canvas) {
