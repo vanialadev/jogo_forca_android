@@ -16,8 +16,9 @@ public class ForcaView extends PlanoCartesiano {
     //responsável por amarzenar todas as figuras geometricas a serem desenhadas
     private Path pathForca;
     private Paint paintForca;
-    private enum Membro{braco, perna};
-    private enum Lado{esquerdo ,direito};
+    private enum Membro{braco, perna}
+    private enum Lado{esquerdo ,direito}
+    private ForcaController forcaController;
 
     public ForcaView(Context context) {
         super(context);
@@ -115,4 +116,11 @@ public class ForcaView extends PlanoCartesiano {
         this.pathForca = pathForca;
     }
 
+    public ForcaController getForcaController() {
+        return forcaController;
+    }
+
+    public void setForcaController(ForcaController forcaController) {
+        this.forcaController = forcaController;
+    }
 }

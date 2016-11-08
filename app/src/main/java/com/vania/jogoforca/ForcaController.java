@@ -18,7 +18,7 @@ public class ForcaController {
         letrasUsadas = new HashSet<>();
     }
 
-    public void Joga(Character letra){
+    public void joga(Character letra){
         //caso o set ja tenha  aletra jogada saimos da funcao
         if(letrasUsadas.contains(letra)){
             return;
@@ -58,9 +58,5 @@ public class ForcaController {
 
     public int getQntErros() {
         return qntErros;
-    }
-
-    public void setQntErros(int qntErros) {
-        this.qntErros = qntErros;
     }
 }
