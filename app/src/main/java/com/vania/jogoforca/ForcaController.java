@@ -31,7 +31,7 @@ public class ForcaController {
 
     }
 
-    public String getpalavraAteAgora(){
+    public String getPalavraAteAgora(){
         String visuazlizacao = "";
         for(char c : palavraParaAdvinhar.toCharArray()){
             if(letrasUsadas.contains(c)){
@@ -49,7 +49,7 @@ public class ForcaController {
     }
 
     public boolean isGanhou(){
-        return !getpalavraAteAgora().contains(" ");
+        return !getPalavraAteAgora().contains(" ");
     }
 
     public boolean isTerminou(){

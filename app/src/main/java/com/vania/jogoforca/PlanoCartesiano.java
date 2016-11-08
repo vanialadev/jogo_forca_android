@@ -33,14 +33,14 @@ public class PlanoCartesiano extends View {
 
         Path path = new Path();//caminhos que quero desenhar
 
-        int max = toPixal(10);
+        int max = toPixel(10);
         for (int n = 0; n <= 10; n++){
             //desenha as linhas n vertcal
-            path.moveTo(toPixal(n), 1);
-            path.lineTo(toPixal(n), max);
+            path.moveTo(toPixel(n), 1);
+            path.lineTo(toPixel(n), max);
             //desenha as lnhas na horizontal
-            path.moveTo(1, toPixal(n));
-            path.lineTo(max, toPixal(n));
+            path.moveTo(1, toPixel(n));
+            path.lineTo(max, toPixel(n));
         }
 
         Paint paint = new Paint();
@@ -53,7 +53,7 @@ public class PlanoCartesiano extends View {
 
     }
 
-    public int toPixal(int vezes) {
+    public int toPixel(int vezes) {
         return vezes * getUnidade();
     }
 
