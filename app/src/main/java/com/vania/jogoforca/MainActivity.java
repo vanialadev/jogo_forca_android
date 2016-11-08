@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     btJogar.setEnabled(false);
                     btPlay.setEnabled(true);
                     if (getForcaController().isMorreu()){
-                        Toast.makeText(getApplicationContext(), "Ops!, Você Perdeu!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Ops! Você Perdeu!", Toast.LENGTH_SHORT).show();
                     }else{
                         if (getForcaController().isGanhou()){
                             Toast.makeText(getApplicationContext(), "PARABÉNS, você ganhou", Toast.LENGTH_SHORT).show();

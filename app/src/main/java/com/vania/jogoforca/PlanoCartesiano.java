@@ -21,6 +21,8 @@ public class PlanoCartesiano extends View {
     //menor lado do display dividido por 10 - 1/10 do tamanho da tela
     private int unidade;
 
+    private boolean desenhaPlanoCartesiano = false;
+
     public PlanoCartesiano(Context context) {
         super(context);
     }
@@ -68,7 +70,10 @@ public class PlanoCartesiano extends View {
         }
         setUnidade(getMenorLadoDiplay()/10);
 
-        drawPlanoCartesiano(canvas);
+
+        if (desenhaPlanoCartesiano) {
+            drawPlanoCartesiano(canvas);
+        }
     }
 
     public int getMenorLadoDiplay() {
@@ -85,5 +90,13 @@ public class PlanoCartesiano extends View {
 
     public void setUnidade(int unidade) {
         this.unidade = unidade;
+    }
+
+    public boolean isDesenhaPlanoCartesiano() {
+        return desenhaPlanoCartesiano;
+    }
+
+    public void setDesenhaPlanoCartesiano(boolean desenhaPlanoCartesiano) {
+        this.desenhaPlanoCartesiano = desenhaPlanoCartesiano;
     }
 }

@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/etLetra"
         android:layout_gravity="center_horizontal|bottom"
+        android:enabled="false"
         android:maxLength="1"/> <!--Quantidade de caracteres que podem ser usados -->
 
     <Button

@@ -34,16 +34,32 @@ public class ForcaView extends PlanoCartesiano {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-//        getPathForca().moveTo(toPixal(1), toPixal(2));
-//        getPathForca().lineTo(toPixal(10), toPixal(2));
-
         plotaArmacaoDaForca();
-        plotaCabeca();
-        plotaCorpo();
-        plotaMembro(Membro.braco, Lado.direito);
-        plotaMembro(Membro.braco, Lado.esquerdo);
-        plotaMembro(Membro.perna, Lado.direito);
-        plotaMembro(Membro.perna, Lado.esquerdo);
+//        setDesenhaPlanoCartesiano(true);
+
+        if (getForcaController() != null){
+
+            switch (getForcaController().getQntErros()){
+                case 0:
+                    plotaCabeca();
+                    break;
+                case 1:
+                    plotaCorpo();
+                    break;
+                case 2:
+                    plotaMembro(Membro.braco, Lado.direito);
+                    break;
+                case 3:
+                    plotaMembro(Membro.braco, Lado.esquerdo);
+                    break;
+                case 4:
+                    plotaMembro(Membro.perna, Lado.direito);
+                    break;
+                case 5:
+                    plotaMembro(Membro.perna, Lado.esquerdo);
+                    break;
+            }
+        }
 
         plotaTracos();
         drawLetrasCorretas(canvas);
